@@ -1,6 +1,7 @@
 import Form from "./Form";
 import List from "./List";
 import Menu from "./Menu";
+import Section from "./Section";
 
 const tasks = [
   { id: 1, content: "przejsć na Reacta", done: false },
@@ -16,14 +17,7 @@ function App() {
         <h1>Lista zadań</h1>
       </header>
       <main>
-        <section className="section">
-          <h2 className="section__title section__title--form">
-            Dodaj nowe zadanie
-          </h2>
-          <div className="section__content">
-            <Form />
-          </div>
-        </section>
+        <Section title="Dodaj nowe zadanie" content={<Form />} />
         <section className="section">
           <div className="section__menuContainer">
             <h2 className="section__title">Lista zadań</h2>
