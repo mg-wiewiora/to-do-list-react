@@ -1,3 +1,5 @@
+import "./style.css"
+
 const List = (props) => (
   <ul className="list">
     {props.tasks.map((task) => (
@@ -7,7 +9,17 @@ const List = (props) => (
           task.done && props.hideDone ? " list__taskBody--hidden" : ""
         }`}
       >
-        {task.content}
+        <button className={`list__taskButton list__taskButton--checkMark`}>
+          {task.done ? "✓" : ""}
+        </button>
+        <span className={`list__taskContent${
+          task.done ? " list__taskContent--done" : ""
+        }`}>
+          {task.content}
+        </span>
+        <button className="list__taskButton list__taskButton--delete">
+          🗑
+        </button>
       </li>
     ))}
   </ul>
