@@ -18,15 +18,11 @@ function App() {
       </header>
       <main>
         <Section title="Dodaj nowe zadanie" content={<Form />} />
-        <section className="section">
-          <div className="section__menuContainer">
-            <h2 className="section__title">Lista zadań</h2>
-            <Menu tasks={tasks} hideDone={hideDone} />
-          </div>
-          <div className="section__content">
-            <List tasks={tasks} hideDone={hideDone} />
-          </div>
-        </section>
+        <Section
+          title="Lista zadań"
+          menu={<Menu tasks={tasks} hideDone={hideDone} />}
+          content={<List tasks={tasks} hideDone={hideDone} />}
+        />
       </main>
     </div>
   );
