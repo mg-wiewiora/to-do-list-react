@@ -7,6 +7,8 @@
 > Language of the page: **Polish**
 >
 
+<img width="200" alt=" To-Do List icon" src="https://github.com/user-attachments/assets/38e84269-ad80-4595-ae84-aafea5a0d238" />
+
 ---
 
 ## Demo
