@@ -7,12 +7,6 @@
 > Language of the page: **Polish**
 >
 
-<img
-  src="images/icon.png"
-  alt="To-Do List application icon"
-  width="200"
-/>
-
 ---
 
 ## Demo
