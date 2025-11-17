@@ -6,15 +6,19 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 
-const tasks = [
-  { id: 1, content: "przejsć na Reacta", done: false },
-  { id: 2, content: "wypić kawę", done: true },
-];
-
 function App() {
   const [hideDone, setHideDone] = useState(false);
+  const [tasks, setList] = useState([
+    { id: 1, content: "przejsć na Reacta", done: false },
+    { id: 2, content: "wypić kawę", done: true },
+  ]);
+
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
+  };
+
+  const deleteTask = (id) => {
+    setList((tasks) => tasks.filter((task) => task.id != id));
   };
 
   return (
@@ -23,8 +27,16 @@ function App() {
       <Section title="Dodaj nowe zadanie" content={<Form />} />
       <Section
         title="Lista zadań"
-        menu={<Menu tasks={tasks} hideDone={hideDone} toggleHideDone={toggleHideDone} />}
-        content={<List tasks={tasks} hideDone={hideDone} />}
+        menu={
+          <Menu
+            tasks={tasks}
+            hideDone={hideDone}
+            toggleHideDone={toggleHideDone}
+          />
+        }
+        content={
+          <List tasks={tasks} hideDone={hideDone} deleteTask={deleteTask} />
+        }
       />
     </Container>
   );
