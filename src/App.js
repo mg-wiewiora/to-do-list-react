@@ -8,7 +8,7 @@ import Container from "./Container";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setList] = useState([
+  const [tasks, setTasks] = useState([
     { id: 1, content: "przejsć na Reacta", done: false },
     { id: 2, content: "wypić kawę", done: true },
   ]);
@@ -18,11 +18,11 @@ function App() {
   };
 
   const deleteTask = (id) => {
-    setList((tasks) => tasks.filter((task) => task.id != id));
+    setTasks((tasks) => tasks.filter((task) => task.id != id));
   };
 
   const toggleTaskDone = (id) => {
-    setList((tasks) =>
+    setTasks((tasks) =>
       tasks.map((task) => {
         if (task.id === id) {
           return { ...task, done: !task.done };
@@ -33,7 +33,7 @@ function App() {
   };
 
   const markAllAsDone = () => {
-    setList((tasks) =>
+    setTasks((tasks) =>
       tasks.map((task) => ({
         ...task,
         done: true,
@@ -42,7 +42,7 @@ function App() {
   };
 
   const addTask = (content) => {
-    setList((tasks) => [
+    setTasks((tasks) => [
       ...tasks,
       {
         content,
