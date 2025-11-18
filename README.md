@@ -1,6 +1,7 @@
-# To Do List, static version in React
+# To Do List
+Fully interactive version -> React Hooks & State Management
 
-> This project is a static version of the previous To-Do List application (created in other [public repository](https://mg-wiewiora.github.io/to-do-list-improved/)). The main goal was to migrate the existing HTML and CSS structure to the **React framework** to focus purely on component architecture.
+> This project is a React version of the previous To-Do List application (created in other [public repository](https://mg-wiewiora.github.io/to-do-list-improved/)). It is a fully functional To-Do List application. It was developed to apply core **React concepts**, focusing on advanced state management, component communication, and immutability.
 
 > This project was created as part of learning Front-end fundamentals.
 >
@@ -17,38 +18,43 @@
 
 ---
 
-## Functionality (Static View)
+## Functionality (Full CRUD & Filtering)
 
-This version is **visual-only** and does not contain any active JavaScript logic (tasks cannot be added, marked as done, or deleted yet).
+This version successfully implements **full CRUD logic (Create, Read, Update, Delete)** and additional advanced features.
 
 **Key Features:**
 
-* **Component Architecture:** The application view is divided into separate, reusable components (e.g., `Form`, `List`, `Menu`).
-* **Structure Migration:** Successful translation of the existing semantic HTML structure into JSX.
-* **CSS Preservation:** Retention of all original CSS styling and layout.
-
+* **Full Interactivity (CRUD):** Users can add, delete, and toggle the 'done' status of tasks.
+* **Batch Update:** The ability to mark all tasks as completed at once (`markAllAsDone`).
+* **Filtering:** Tasks can be filtered to hide or show completed items (`toggleHideDone`).
+* **State Lifting:** Application state is centralized in the `App` component and passed down to children (Form, List, Menu) via props.
 ---
 
-## Technologies
+## Technologies & Focus
 
-This project focuses on the fundamental concepts of component-based architecture.
+The project emphasizes essential React principles, hooks, and modern JavaScript practices.
 
 * **Framework:** **React**
-* **Structure:** **JSX** (JavaScript XML) for defining component structure.
-* **Styling:** Standard **CSS** (imported directly) utilizing previous BEM conventions.
+* **Language:** JavaScript (ES6+)
+* **State Management:** **`useState` hook** for all application state, including filtering.
+* **Immutability:** State updates use modern array methods (`map`, `filter`) and the spread operator (`...`) to ensure immutability.
+* **Styling:** Standard **CSS** utilizing the previous BEM conventions.
 
 ---
 
-## Learning Points & Focus
+## Key Learning Points
 
-This project provided crucial practical experience with:
+This project provided deep practical experience with:
 
-1.  **Component Thinking:** Breaking down a complex UI (the To-Do List) into smaller, manageable components.
-2.  **JSX Syntax:** Understanding and applying the syntax rules for combining HTML-like code with JavaScript.
-3.  **Setup and Build:** Successfully setting up a basic React environment and deploying it (via GitHub Pages).
-4.  **Props Introduction:** Learning how to pass static data down through components (though logic is not yet implemented).
+1.  **Immutability in React:** Mastering state updates by **never directly mutating** the `tasks` array, instead relying on `filter` and `map` for clean updates.
+2.  **State Lifting & Communication:** Centralizing the state in the parent component (`App`) and passing handler functions (`addTask`, `deleteTask`) to child components using **props**.
+3.  **Advanced `useState`:** Using the functional update form (`setTasks((tasks) => ...)`), which is essential for managing complex arrays and objects based on the previous state.
+4.  **Dynamic Rendering:** Efficiently rendering lists of elements and using **unique IDs** as keys for optimized performance.
 
 ---
+
+![gif - how to interact with the page](https://github.com/user-attachments/assets/83138d10-dc6a-4389-a8da-c721f8c2bb47)
+
 
 ![gif - responsiveness of the page](https://github.com/user-attachments/assets/6813d9cc-802f-4eb4-8892-855cf7048cf1)
 
