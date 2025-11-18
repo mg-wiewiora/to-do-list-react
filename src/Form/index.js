@@ -3,9 +3,17 @@ import "./style.css";
 
 const Form = ({ addTask }) => {
   const [taskInput, setTaskInput] = useState("");
+
   const onFormSubmit = (event) => {
     event.preventDefault();
-    addTask(taskInput.trim());
+
+    const trimmedTask = taskInput.trim();
+
+    if (trimmedTask === "") {
+      return;
+    }
+
+    addTask(trimmedTask);
     setTaskInput("");
   };
 
