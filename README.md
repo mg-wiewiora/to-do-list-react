@@ -14,7 +14,7 @@ Fully interactive version -> React Hooks & State Management
 
 ## Demo
 
-**Check the website:** [https://mg-wiewiora.github.io/to-do-list-improved/](https://mg-wiewiora.github.io/to-do-list-react/)
+**Check the website:** [https://mg-wiewiora.github.io/to-do-list-react/](https://mg-wiewiora.github.io/to-do-list-react/)
 
 ---
 
