@@ -6,19 +6,21 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 
+const initialTasks = [
+  { id: 1, content: "przejsć na Reacta", done: false },
+  { id: 2, content: "wypić kawę", done: true },
+];
+
 function App() {
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState([
-    { id: 1, content: "przejsć na Reacta", done: false },
-    { id: 2, content: "wypić kawę", done: true },
-  ]);
+  const [tasks, setTasks] = useState(initialTasks);
 
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
   };
 
   const deleteTask = (id) => {
-    setTasks((tasks) => tasks.filter((task) => task.id != id));
+    setTasks((tasks) => tasks.filter((task) => task.id !== id));
   };
 
   const toggleTaskDone = (id) => {
