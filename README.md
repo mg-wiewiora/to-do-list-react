@@ -18,12 +18,13 @@ Fully interactive version -> React Hooks & State Management
 
 ---
 
-## Functionality (Full CRUD & Filtering)
+## Functionality (Full CRUD, Filtering & Persistence)
 
 This version successfully implements **full CRUD logic (Create, Read, Update, Delete)** and additional advanced features.
 
 **Key Features:**
 
+* **Data Persistence:** Tasks are saved to and loaded from the browser's **`localStorage`**. The list state is maintained even after refreshing the page.
 * **Full Interactivity (CRUD):** Users can add, delete, and toggle the 'done' status of tasks.
 * **Batch Update:** The ability to mark all tasks as completed at once (`markAllAsDone`).
 * **Filtering:** Tasks can be filtered to hide or show completed items (`toggleHideDone`).
@@ -37,6 +38,7 @@ The project emphasizes essential React principles, hooks, and modern JavaScript 
 * **Framework:** **React**
 * **Language:** JavaScript (ES6+)
 * **State Management:** **`useState` hook** for all application state, including filtering.
+* **Data Persistence:** **`useEffect` hook** for side effects (saving state) combined with **`localStorage`**.
 * **Immutability:** State updates use modern array methods (`map`, `filter`) and the spread operator (`...`) to ensure immutability.
 * **Styling:** Standard **CSS** utilizing the previous BEM conventions.
 
@@ -46,14 +48,16 @@ The project emphasizes essential React principles, hooks, and modern JavaScript 
 
 This project provided deep practical experience with:
 
-1.  **Immutability in React:** Mastering state updates by **never directly mutating** the `tasks` array, instead relying on `filter` and `map` for clean updates.
-2.  **State Lifting & Communication:** Centralizing the state in the parent component (`App`) and passing handler functions (`addTask`, `deleteTask`) to child components using **props**.
-3.  **Advanced `useState`:** Using the functional update form (`setTasks((tasks) => ...)`), which is essential for managing complex arrays and objects based on the previous state.
-4.  **Dynamic Rendering:** Efficiently rendering lists of elements and using **unique IDs** as keys for optimized performance.
+1.  **State Persistence:** Implementing non-volatile state management using the functional form of `useState` (for lazy initialisation) and the `useEffect` hook (for saving on every state change).
+2.  **Side Effects (`useEffect`):** Correctly utilizing `useEffect` with a dependency array (`[tasks]`) to handle external interactions (like saving to `localStorage`) only when the relevant state changes.
+3.  **Immutability in React:** Mastering state updates by **never directly mutating** the `tasks` array, instead relying on `filter` and `map` for clean updates.
+4.  **State Lifting & Communication:** Centralizing the state in the parent component (`App`) and passing handler functions (`addTask`, `deleteTask`) to child components using **props**.
+5.  **Advanced `useState`:** Using the functional update form (`setTasks((tasks) => ...)`), which is essential for managing complex arrays and objects based on the previous state.
+6.  **Dynamic Rendering:** Efficiently rendering lists of elements and using **unique IDs** as keys for optimized performance.
 
 ---
 
-![gif - how to interact with the page](https://github.com/user-attachments/assets/83138d10-dc6a-4389-a8da-c721f8c2bb47)
+![gif - how to interact with the page](https://github.com/user-attachments/assets/c64e7ee4-8c91-459d-a8b0-206d8c9a7b5c)
 
 
 ![gif - responsiveness of the page](https://github.com/user-attachments/assets/6813d9cc-802f-4eb4-8892-855cf7048cf1)
