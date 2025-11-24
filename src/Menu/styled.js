@@ -27,6 +27,6 @@ export const Button = styled.button`
   }
 
   &:disabled {
-    color: ${({ theme }) => theme.color.grey};
+    color: ${({ theme }) => theme.color.silver};
   }
 `;
