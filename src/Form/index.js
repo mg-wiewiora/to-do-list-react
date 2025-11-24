@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Wrapper, Input, Button } from "./styled";
+import { FormWrapper, Input, Button } from "./styled";
 
 const Form = ({ addTask }) => {
   const [taskInput, setTaskInput] = useState("");
