@@ -1,3 +1,7 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+
 html {
   box-sizing: border-box;
 }
@@ -11,5 +15,6 @@ body {
   margin: 0 auto;
   padding: 20px;
   max-width: 900px;
-  background-color: #eee;
+  background-color: ${({ theme }) => theme.color.stone};
 }
+`;
