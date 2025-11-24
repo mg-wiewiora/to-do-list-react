@@ -28,10 +28,12 @@ export const useTasks = () => {
   };
 
   const markAllAsDone = () => {
-    setTasks((tasks) => tasks.map((task) => ({
-      ...task,
-      done: true,
-    })));
+    setTasks((tasks) =>
+      tasks.map((task) => ({
+        ...task,
+        done: true,
+      }))
+    );
   };
 
   const addTask = (content) => {
