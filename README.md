@@ -1,7 +1,9 @@
 # To Do List  
 Fully interactive version → React Hooks, Custom Hooks & Styled Components
 
-> This project is an improved React version of the previous To-Do List application. It includes fully interactive task management with persistent storage, custom hooks, and modern component-based styling.
+> This project is a React version of the previous To-Do List application (created in other [public repository](https://mg-wiewiora.github.io/to-do-list-improved/)). It includes fully interactive task management with persistent storage, custom hooks, and modern component-based styling.
+> 
+> This project was created as part of learning Front-end fundamentals.
 >
 > Language of the page: **Polish**
 
