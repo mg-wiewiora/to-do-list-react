@@ -18,14 +18,14 @@ const Form = ({ addTask }) => {
   };
 
   return (
-    <Wrapper onSubmit={onFormSubmit}>
+    <FormWrapper onSubmit={onFormSubmit}>
       <Input
         value={taskInput}
         placeholder="Co jest do zrobienia?"
         onChange={({ target }) => setTaskInput(target.value)}
       />
       <Button>Dodaj zadanie</Button>
-    </Wrapper>
+    </FormWrapper>
   );
 };
 
