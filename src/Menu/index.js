@@ -1,22 +1,21 @@
-import "./style.css";
+import { Wrapper, Button } from "./styled";
 
 const Menu = ({ tasks, hideDone, toggleHideDone, markAllAsDone }) => (
-  <div className="menu">
+  <Wrapper>
     {tasks.length > 0 && (
       <>
-        <button onClick={toggleHideDone} className="menu__button">
+        <Button onClick={toggleHideDone}>
           {hideDone ? "Pokaż" : "Ukryj"} ukończone
-        </button>
-        <button
+        </Button>
+        <Button
           onClick={markAllAsDone}
-          className="menu__button"
           disabled={tasks.every(({ done }) => done)}
         >
           Ukończ wszystkie
-        </button>
+        </Button>
       </>
     )}
-  </div>
+  </Wrapper>
 );
 
 export default Menu;
