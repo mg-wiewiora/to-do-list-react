@@ -1,18 +1,19 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { FormWrapper, Input, Button } from "./styled";
 
 const Form = ({ addTask }) => {
   const [taskInput, setTaskInput] = useState("");
   const inputRef = useRef(null);
 
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
   const onFormSubmit = (event) => {
     event.preventDefault();
 
     const trimmedTask = taskInput.trim();
-
-    if (trimmedTask === "") {
-      return;
-    }
+    if (!trimmedTask) return;
 
     addTask(trimmedTask);
     setTaskInput("");
