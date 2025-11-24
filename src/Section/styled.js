@@ -23,11 +23,13 @@ export const MenuContainer = styled.div`
 export const Title = styled.h2`
   margin: 0;
   font-size: 20px;
-`;
 
-export const TitleForm = styled(Title)`
-  border-bottom: 1px solid ${({ theme }) => theme.color.grey};
-  padding: 20px;
+  ${({ form }) =>
+    form &&
+    `
+      border-bottom: 1px solid ${(props) => props.theme.color.grey};
+      padding: 20px;
+    `}
 `;
 
 export const Content = styled.div`
