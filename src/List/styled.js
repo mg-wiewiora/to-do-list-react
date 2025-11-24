@@ -30,7 +30,7 @@ export const Content = styled.span`
 `;
 
 export const Button = styled.button`
-  color: white;
+  color: ${({ theme }) => theme.color.white};
   border: none;
   padding: 0;
   height: 30px;
@@ -40,29 +40,29 @@ export const Button = styled.button`
   ${({ $checkMark }) =>
     $checkMark &&
     css`
-      background-color: #0a8127;
+      background-color: ${({ theme }) => theme.color.green};
       transition: 0.5s;
 
       &:hover {
-        background-color: #0b982f;
+         filter: brightness(110%);
       }
 
       &:active {
-        background-color: #0daf36;
+         filter: brightness(120%);
       }
     `}
 
   ${({ $delete }) =>
     $delete &&
     css`
-      background-color: #e42121;
+      background-color: ${({ theme }) => theme.color.red};
       transition: 0.5s;
       &:hover {
-        background-color: #e74040;
+         filter: brightness(110%);
       }
 
       &:active {
-        background-color: #ea5757;
+         filter: brightness(120%);
       }
     `}
 `;
