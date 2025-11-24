@@ -1,64 +1,75 @@
-# To Do List
-Fully interactive version -> React Hooks & State Management
+# To Do List  
+Fully interactive version → React Hooks, Custom Hooks & Styled Components
 
-> This project is a React version of the previous To-Do List application (created in other [public repository](https://mg-wiewiora.github.io/to-do-list-improved/)). It is a fully functional To-Do List application. It was developed to apply core **React concepts**, focusing on advanced state management, component communication, and immutability.
-
-> This project was created as part of learning Front-end fundamentals.
+> This project is an improved React version of the previous To-Do List application. It includes fully interactive task management with persistent storage, custom hooks, and modern component-based styling.
 >
 > Language of the page: **Polish**
->
 
-<img width="200" alt=" To-Do List icon" src="https://github.com/user-attachments/assets/38e84269-ad80-4595-ae84-aafea5a0d238" />
+<img width="200" alt="To-Do List icon" src="https://github.com/user-attachments/assets/38e84269-ad80-4595-ae84-aafea5a0d238" />
 
 ---
 
 ## Demo
 
-**Check the website:** [https://mg-wiewiora.github.io/to-do-list-react/](https://mg-wiewiora.github.io/to-do-list-react/)
+**Check the website:**  
+https://mg-wiewiora.github.io/to-do-list-react/
 
 ---
 
-## Functionality (Full CRUD, Filtering & Persistence)
+## Features
 
-This version successfully implements **full CRUD logic (Create, Read, Update, Delete)** and additional advanced features.
+This application implements complete task management using modern React patterns.
 
-**Key Features:**
+### **Core Functionality**
+- Create new tasks  
+- Toggle task completion  
+- Delete tasks  
+- Mark all tasks as done  
+- Filter and hide completed tasks  
 
-* **Data Persistence:** Tasks are saved to and loaded from the browser's **`localStorage`**. The list state is maintained even after refreshing the page.
-* **Full Interactivity (CRUD):** Users can add, delete, and toggle the 'done' status of tasks.
-* **Batch Update:** The ability to mark all tasks as completed at once (`markAllAsDone`).
-* **Filtering:** Tasks can be filtered to hide or show completed items (`toggleHideDone`).
-* **State Lifting:** Application state is centralized in the `App` component and passed down to children (Form, List, Menu) via props.
+### **Persistence**
+- Tasks are stored in **localStorage**, so the list stays after a page reload.
+
+### **Enhancements**
+- `useRef` sets focus on the input field after adding a new task  
+- **Styled Components** replace CSS and manage theme and responsiveness  
+- All task-related logic moved to a **custom hook (`useTasks`)**
+
 ---
 
-## Technologies & Focus
+## Technologies Used
 
-The project emphasizes essential React principles, hooks, and modern JavaScript practices.
+### **React Hooks**
+- `useState`  
+- `useEffect`  
+- `useRef`  
+- Custom hook: `useTasks`
 
-* **Framework:** **React**
-* **Language:** JavaScript (ES6+)
-* **State Management:** **`useState` hook** for all application state, including filtering.
-* **Data Persistence:** **`useEffect` hook** for side effects (saving state) combined with **`localStorage`**.
-* **Immutability:** State updates use modern array methods (`map`, `filter`) and the spread operator (`...`) to ensure immutability.
-* **Styling:** Standard **CSS** utilizing the previous BEM conventions.
+### **Styling**
+- **Styled Components**
+  - Theming (colors and breakpoints)
+  - Scoped component-level styling
+
+### **JavaScript**
+- ES6+
+- Immutable state updates using `map`, `filter` and spread operator
 
 ---
 
 ## Key Learning Points
 
-This project provided deep practical experience with:
-
-1.  **State Persistence:** Implementing non-volatile state management using the functional form of `useState` (for lazy initialisation) and the `useEffect` hook (for saving on every state change).
-2.  **Side Effects (`useEffect`):** Correctly utilizing `useEffect` with a dependency array (`[tasks]`) to handle external interactions (like saving to `localStorage`) only when the relevant state changes.
-3.  **Immutability in React:** Mastering state updates by **never directly mutating** the `tasks` array, instead relying on `filter` and `map` for clean updates.
-4.  **State Lifting & Communication:** Centralizing the state in the parent component (`App`) and passing handler functions (`addTask`, `deleteTask`) to child components using **props**.
-5.  **Advanced `useState`:** Using the functional update form (`setTasks((tasks) => ...)`), which is essential for managing complex arrays and objects based on the previous state.
-6.  **Dynamic Rendering:** Efficiently rendering lists of elements and using **unique IDs** as keys for optimized performance.
+1. Managing state persistence with lazy `useState` initialization and `useEffect`  
+2. Organizing logic inside a custom hook  
+3. Avoiding state mutation through functional updates  
+4. Replacing CSS with component-scoped styles  
+5. Improving UX with `useRef` for input focusing  
+6. Structuring UI into reusable components  
 
 ---
 
-![gif - how to interact with the page](https://github.com/user-attachments/assets/c64e7ee4-8c91-459d-a8b0-206d8c9a7b5c)
+## Preview
 
+![gif - how to interact with the page](https://github.com/user-attachments/assets/c64e7ee4-8c91-459d-a8b0-206d8c9a7b5c)
 
 ![gif - responsiveness of the page](https://github.com/user-attachments/assets/6813d9cc-802f-4eb4-8892-855cf7048cf1)
 
