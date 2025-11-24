@@ -44,11 +44,11 @@ export const Button = styled.button`
       transition: 0.5s;
 
       &:hover {
-         filter: brightness(110%);
+        filter: brightness(110%);
       }
 
       &:active {
-         filter: brightness(120%);
+        filter: brightness(120%);
       }
     `}
 
@@ -58,11 +58,11 @@ export const Button = styled.button`
       background-color: ${({ theme }) => theme.color.red};
       transition: 0.5s;
       &:hover {
-         filter: brightness(110%);
+        filter: brightness(110%);
       }
 
       &:active {
-         filter: brightness(120%);
+        filter: brightness(120%);
       }
     `}
 `;

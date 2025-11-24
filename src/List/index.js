@@ -5,14 +5,14 @@ const List = ({ tasks, hideDone, deleteTask, toggleTaskDone }) => (
     {tasks.map((task) => (
       <TaskBody key={task.id} $hidden={task.done && hideDone}>
         <Button $checkMark onClick={() => toggleTaskDone(task.id)}>
-          {task.done ? "✓" : ""}{" "}
+          {task.done ? "✓" : ""}
         </Button>
         <Content $done={task.done}>{task.content}</Content>
         <Button $delete onClick={() => deleteTask(task.id)}>
           🗑
-        </Button>{" "}
+        </Button>
       </TaskBody>
-    ))}{" "}
+    ))}
   </Tasks>
 );
 
