@@ -5,7 +5,7 @@ import Menu from "./Menu";
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
-
+import {useTasks} from "./useTasks";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
@@ -56,6 +56,14 @@ function App() {
       },
     ]);
   };
+
+const {
+  tasks,
+  deleteTask,
+  toggleTaskDone,
+  markAllAsDone,
+  addTask,
+} = useTasks();
 
   return (
     <Container>
