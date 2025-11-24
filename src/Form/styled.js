@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FormWrapper = styled.form`
+export const Wrapper = styled.form`
   display: grid;
   grid-template-columns: 1fr auto;
   grid-gap: 20px;
@@ -24,11 +24,11 @@ export const Button = styled.button`
   cursor: pointer;
 
   &:hover {
-   filter: brightness(110%);
+    filter: brightness(110%);
     transform: scale(1.1);
   }
 
   &:active {
-   filter: brightness(120%);
+    filter: brightness(120%);
   }
 `;
