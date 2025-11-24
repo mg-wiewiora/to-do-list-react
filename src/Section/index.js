@@ -1,17 +1,13 @@
-import "./style.css";
+import { SectionWrapper, MenuContainer, Title, Content } from "./styled";
 
-const Section = ({title, content, menu}) => (
-
-    <section className="section">
-          <div className="section__menuContainer">
-            <h2 className="section__title">{title}</h2>
-           {menu}
-          </div>
-          <div className="section__content">
-            {content}
-          </div>
-        </section>
-
+const Section = ({ title, content, menu }) => (
+  <SectionWrapper>
+    <MenuContainer>
+      <Title>{title}</Title>
+      {menu}
+    </MenuContainer>
+    <Content>{content}</Content>
+  </SectionWrapper>
 );
 
 export default Section;
