@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Wrapper, Button } from "./styled";
-import { selectTasks, toggleHideDone } from "../tasksSlice";
+import { selectTasks, toggleHideDone, markAllAsDone } from "../tasksSlice";
 
-const Menu = ({ markAllAsDone }) => {
+const Menu = () => {
   const { tasks, hideDone } = useSelector(selectTasks);
   const dispatch = useDispatch();
 
@@ -15,7 +15,7 @@ const Menu = ({ markAllAsDone }) => {
           </Button>
 
           <Button
-            onClick={markAllAsDone}
+            onClick={() => dispatch(markAllAsDone())}
             disabled={tasks.every(({ done }) => done)}
           >
             Ukończ wszystkie
