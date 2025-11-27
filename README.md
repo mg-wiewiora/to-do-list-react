@@ -1,7 +1,7 @@
 # To Do List  
-Fully interactive version → React Hooks, Custom Hooks & Styled Components
+Fully interactive version → React & Redux Toolkit, Styled Components
 
-> This project is a React version of the previous To-Do List application (created in other [public repository](https://mg-wiewiora.github.io/to-do-list-improved/)). It includes fully interactive task management with persistent storage, custom hooks, and modern component-based styling.
+> This project is a React version of the previous To-Do List application (created in other [public repository](https://mg-wiewiora.github.io/to-do-list-improved/)). It includes fully interactive task management with Redux Toolkit and modern component-based styling.
 > 
 > This project was created as part of learning Front-end fundamentals.
 >
@@ -29,23 +29,26 @@ This application implements complete task management using modern React patterns
 - Mark all tasks as done  
 - Filter and hide completed tasks  
 
-### **Persistence**
-- Tasks are stored in **localStorage**, so the list stays after a page reload.
+### **State Management**
+- All task-related logic moved to **Redux Toolkit slice (`tasksSlice`)**  
+- Components use `useSelector` and `useDispatch` to interact with the store
 
 ### **Enhancements**
 - `useRef` sets focus on the input field after adding a new task  
 - **Styled Components** replace CSS and manage theme and responsiveness  
-- All task-related logic moved to a **custom hook (`useTasks`)**
 
 ---
 
 ## Technologies Used
 
-### **React Hooks**
-- `useState`  
-- `useEffect`  
-- `useRef`  
-- Custom hook: `useTasks`
+### **React**
+- Functional components  
+- `useState` and `useRef` for input handling  
+- `useSelector` and `useDispatch` from `react-redux`  
+
+### **State Management**
+- **Redux Toolkit**
+  - `createSlice`, `configureStore`, actions & reducers  
 
 ### **Styling**
 - **Styled Components**
@@ -54,18 +57,18 @@ This application implements complete task management using modern React patterns
 
 ### **JavaScript**
 - ES6+
-- Immutable state updates using `map`, `filter` and spread operator
+- Immutable state updates using Redux Toolkit (immer)
 
 ---
 
 ## Key Learning Points
 
-1. Managing state persistence with lazy `useState` initialization and `useEffect`  
-2. Organizing logic inside a custom hook  
-3. Avoiding state mutation through functional updates  
-4. Replacing CSS with component-scoped styles  
-5. Improving UX with `useRef` for input focusing  
-6. Structuring UI into reusable components  
+1. Managing state globally with Redux Toolkit  
+2. Organizing actions and reducers inside a slice  
+3. Using `useSelector` and `useDispatch` in components  
+4. Improving UX with `useRef` for input focusing  
+5. Structuring UI into reusable components  
+6. Styling with Styled Components
 
 ---
 
