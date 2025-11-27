@@ -10,7 +10,6 @@ import { selectTasks } from "./tasksSlice";
 
 function Tasks() {
   const tasksSlice = useSelector(selectTasks);
-  const tasks = tasksSlice.tasks;
 
   const {
     deleteTask,
@@ -22,22 +21,20 @@ function Tasks() {
   return (
     <Container>
       <Header title="Lista zadań" />
-      
+
       <Section
         title="Dodaj nowe zadanie"
         content={<Form addTask={addTask} />}
       />
-      
+
       <Section
         title="Lista zadań"
         menu={
-          <Menu
-            markAllAsDone={markAllAsDone}
-          />
+          <Menu markAllAsDone={markAllAsDone} />
         }
         content={
           <List
-            tasks={tasks}
+            tasks={tasksSlice.tasks}
             deleteTask={deleteTask}
             toggleTaskDone={toggleTaskDone}
           />
