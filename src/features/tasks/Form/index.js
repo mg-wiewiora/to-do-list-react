@@ -20,11 +20,13 @@ const Form = () => {
     const trimmedTask = taskInput.trim();
     if (!trimmedTask) return;
 
-dispatch(addTask({
-  content: trimmedTask,
-  done: false,
-  id: nanoid(),
-}));
+    dispatch(
+      addTask({
+        content: trimmedTask,
+        done: false,
+        id: nanoid(),
+      })
+    );
 
     setTaskInput("");
     inputRef.current.focus();
