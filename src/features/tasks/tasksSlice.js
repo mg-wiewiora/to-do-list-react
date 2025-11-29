@@ -45,15 +45,16 @@ export const {
   toggleTaskDone,
   deleteTask,
   markAllAsDone,
+  fetchExampleTasks,
   fetchExampleTasksSuccess,
   fetchExampleTasksError,
-  fetchExampleTasks,
 } = tasksSlice.actions;
 
 const selectTasksState = (state) => state.tasks;
 
 export const selectTasks = (state) => selectTasksState(state).tasks;
 export const selectHideDone = (state) => selectTasksState(state).hideDone;
+export const selectLoading = state => selectTasksState(state).loading;
 export const selectAreTasksEmpty = (state) => selectTasks(state).length === 0;
 export const selectAreAllTasksDone = (state) =>
   selectTasks(state).every(({ done }) => done);

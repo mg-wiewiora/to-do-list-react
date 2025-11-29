@@ -1,6 +1,7 @@
 import Form from "./Form";
 import List from "./List";
 import Menu from "./Menu";
+import FetchExampleTasksButton from "./FetchExampleTasksButton"
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import Search from "./Search";
@@ -11,7 +12,7 @@ function TasksPage() {
     <Container>
       <Header title="Lista zadań" />
 
-      <Section title="Dodaj nowe zadanie" content={<Form />} />
+      <Section title="Dodaj nowe zadanie" menu={<FetchExampleTasksButton />} content={<Form />} />
 
       <Section title="Wyszukiwarka" content={<Search />} />
 

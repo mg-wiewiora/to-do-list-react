@@ -1,6 +1,18 @@
 import styled, { css } from "styled-components";
+import { NavLink } from "react-router-dom";
 
-export const StyledLink = styled
+export const StyledLink = styled(NavLink)`
+  color: ${({ theme }) => theme.color.teal};
+  text-decoration: none;
+
+  &:hover {
+    filter: brightness(110%);
+  }
+
+  &:active {
+    filter: brightness(120%);
+  }
+`;
 
 export const Tasks = styled.ul`
   margin: 0;
@@ -14,7 +26,7 @@ export const TaskBody = styled.li`
   grid-gap: 10px;
   padding: 10px;
   align-items: center;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid ${({ theme }) => theme.color.grey};
 
   ${({ $hidden }) =>
     $hidden &&
