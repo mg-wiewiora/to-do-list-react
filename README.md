@@ -1,10 +1,11 @@
 # To Do List  
 Fully interactive version → React, Redux Toolkit, React Router & Styled Components
 
-> This project is a React version of a previous To-Do List application, rebuilt using modern tools such as Redux Toolkit, React Router and Styled Components.  
+> This project is a React version of the previous To-Do List application (created in other [public repository](https://mg-wiewiora.github.io/to-do-list-improved/)). It was rebuilt using modern tools such as Redux Toolkit, React Router and Styled Components.  
 > It includes full task management, dynamic search, async example task loading, and URL navigation.  
 >
-> Project created as part of Frontend development learning.  
+> This project was created as part of learning Front-end fundamentals.
+>  
 > **Page language: Polish**
 
 <img width="200" alt="To-Do List icon" src="https://github.com/user-attachments/assets/38e84269-ad80-4595-ae84-aafea5a0d238" />
