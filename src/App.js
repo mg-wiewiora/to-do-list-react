@@ -1,33 +1,41 @@
 import {
-  BrowserRouter,
-  Link,
+  HashRouter,
+  NavLink,
   Switch,
   Route,
+  Redirect,
 } from "react-router-dom/cjs/react-router-dom.min";
-import Tasks from "./features/tasks/Tasks";
-import Author from "./features/author/Author";
+import TasksPage from "./features/tasks/TasksPage";
+import TaskPage from "./features/tasks/TasksPage";
+import AuthorPage from "./features/author/AuthorPage";
 
 const App = () => (
-  <BrowserRouter>
+  <HashRouter>
     <nav>
       <ul>
         <li>
-          <Link to="/zadania">Zadania</Link>
+          <NavLink to="/zadania">Zadania</NavLink>
         </li>
         <li>
-          <Link to="/autor">O autorze</Link>
+          <NavLink to="/autor">O autorze</NavLink>
         </li>
       </ul>
       <Switch>
+         <Route path="/zadania/:id">
+          <TaskPage />
+        </Route>
         <Route path="/zadania">
-          <Tasks />
+          <TasksPage />
         </Route>
         <Route path="/autor">
-          <Author />
+          <AuthorPage />
+        </Route>
+        <Route path="/">
+          <Redirect to="/zadania" />
         </Route>
       </Switch>
     </nav>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default App;

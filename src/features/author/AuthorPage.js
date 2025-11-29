@@ -2,7 +2,7 @@ import Section from "../../common/Section";
 import Header from "../../common/Header";
 import { Container } from "../../common/Container/styled";
 
-function Author() {
+function AuthorPage() {
   return (
     <Container>
       <Header title="O autorze" />
@@ -30,4 +30,4 @@ function Author() {
   );
 }
 
-export default Author;
+export default AuthorPage;

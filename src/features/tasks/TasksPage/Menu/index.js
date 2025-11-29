@@ -7,7 +7,7 @@ import {
   selectAreAllTasksDone,
   selectHideDone,
   fetchExampleTasks,
-} from "../tasksSlice";
+} from "../../tasksSlice";
 
 const Menu = () => {
   const areTasksEmpty = useSelector(selectAreTasksEmpty);
