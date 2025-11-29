@@ -7,7 +7,7 @@ import Header from "../../../common/Header";
 import Search from "./Search";
 import { Container } from "../../../common/Container/styled";
 
-function TasksPage() {
+const TasksPage = () => {
   return (
     <Container>
       <Header title="Lista zadań" />

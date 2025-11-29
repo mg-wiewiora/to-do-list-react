@@ -3,7 +3,7 @@ import {
   useReplaceQueryParameter,
 } from "../queryParameters";
 import { searchQueryParamName } from "../searchQueryParamName";
-import { Input } from "../../Input";
+import { Input } from "../../Input/styled";
 import { Wrapper } from "./styled";
 
 const Search = () => {
