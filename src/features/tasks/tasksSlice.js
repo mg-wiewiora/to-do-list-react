@@ -56,11 +56,13 @@ export const getTaskById = (state, taskId) =>
 
 export const selectTasksByQuery = (state, query) => {
   const tasks = selectTasks(state);
-  if (!query || query.trim === "") {
-    return tasks;
-  }
+
+  if (!query?.trim()) return tasks;
+
+  const normalizedQuery = query.trim().toLowerCase();
+
   return tasks.filter(({ content }) =>
-    content.toUpperCase().includes(query.trim().toUpperCase())
+    content.toLowerCase().includes(normalizedQuery)
   );
 };
 
