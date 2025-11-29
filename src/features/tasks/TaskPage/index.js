@@ -2,15 +2,26 @@ import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import { Container } from "../../../common/Container/styled";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { useSelector } from "react-redux";
+import { getTaskById } from "../tasksSlice";
 
 function TaskPage() {
-    const params = useParams();
+  const { id } = useParams();
+  const task = useSelector((state) => getTaskById(state, id));
+
   return (
     <Container>
       <Header title="Szczegóły zadania" />
 
-      <Section title={""} content={task.content} />
-
+      <Section
+        title={task ? task.content : "Nie znaleziono zadania..."}
+        content={
+          <>
+            <strong>Ukończono:</strong>
+            {task.done ? " Tak" : " Nie"}
+          </>
+        }
+      />
     </Container>
   );
 }
