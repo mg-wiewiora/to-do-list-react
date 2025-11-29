@@ -3,6 +3,7 @@ import List from "./List";
 import Menu from "./Menu";
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
+import Search from "./Search";
 import { Container } from "../../../common/Container/styled";
 
 function TasksPage() {
@@ -11,6 +12,8 @@ function TasksPage() {
       <Header title="Lista zadań" />
 
       <Section title="Dodaj nowe zadanie" content={<Form />} />
+
+      <Section title="Wyszukiwarka" content={<Search />} />
 
       <Section title="Lista zadań" menu={<Menu />} content={<List />} />
     </Container>
