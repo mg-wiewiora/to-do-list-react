@@ -13,8 +13,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Montserrat", sans-serif;
     line-height: 1.5;
     margin: 0 auto;
-    padding: 20px;
-    max-width: 900px;
+    
+    
     background-color: ${({ theme }) => theme.color.stone};
   }
 `;
