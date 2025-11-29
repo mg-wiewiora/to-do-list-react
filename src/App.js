@@ -1,6 +1,6 @@
 import Tasks from "./features/tasks/TasksPage";
 import Task from "./features/tasks/TaskPage";
-import Author from "./features/Author";
+import Author from "./features/author/AuthorPage";
 
 import {
   HashRouter,
