@@ -25,6 +25,9 @@ const App = () => (
       <Route path={toAuthor()}>
         <Author />
       </Route>
+      <Route>
+        <Redirect to={toTasks()} />
+      </Route>
     </Switch>
   </HashRouter>
 );
