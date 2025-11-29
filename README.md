@@ -1,11 +1,11 @@
 # To Do List  
-Fully interactive version → React & Redux Toolkit, Styled Components
+Fully interactive version → React, Redux Toolkit, React Router & Styled Components
 
-> This project is a React version of the previous To-Do List application (created in other [public repository](https://mg-wiewiora.github.io/to-do-list-improved/)). It includes fully interactive task management with Redux Toolkit and modern component-based styling.
-> 
-> This project was created as part of learning Front-end fundamentals.
+> This project is a React version of a previous To-Do List application, rebuilt using modern tools such as Redux Toolkit, React Router and Styled Components.  
+> It includes full task management, dynamic search, async example task loading, and URL navigation.  
 >
-> Language of the page: **Polish**
+> Project created as part of Frontend development learning.  
+> **Page language: Polish**
 
 <img width="200" alt="To-Do List icon" src="https://github.com/user-attachments/assets/38e84269-ad80-4595-ae84-aafea5a0d238" />
 
@@ -20,22 +20,30 @@ https://mg-wiewiora.github.io/to-do-list-react/
 
 ## Features
 
-This application implements complete task management using modern React patterns.
-
 ### **Core Functionality**
-- Create new tasks  
-- Toggle task completion  
+- Add new tasks  
+- Mark tasks as done / undone  
 - Delete tasks  
-- Mark all tasks as done  
-- Filter and hide completed tasks  
+- Mark all tasks as completed  
+- Hide or show completed tasks  
+- Search tasks by phrase  
+- Display task details on a separate page (`/zadania/:id`)  
 
-### **State Management**
-- All task-related logic moved to **Redux Toolkit slice (`tasksSlice`)**  
-- Components use `useSelector` and `useDispatch` to interact with the store
+### **Async & Persistence**
+- Load example tasks from an API (Redux Toolkit)  
+- Loading and error states handled in UI  
+- Automatic syncing with LocalStorage  
 
-### **Enhancements**
-- `useRef` sets focus on the input field after adding a new task  
-- **Styled Components** replace CSS and manage theme and responsiveness  
+### **Navigation**
+- React Router with:  
+  - `HashRouter`  
+  - `NavLink` with active state  
+  - additional page: **About Author**  
+
+### **Styling**
+- Styled Components for all styling  
+- Theme-based colors and breakpoints  
+- Reusable UI components (Section, Header, Container)  
 
 ---
 
@@ -43,40 +51,44 @@ This application implements complete task management using modern React patterns
 
 ### **React**
 - Functional components  
-- `useState` and `useRef` for input handling  
-- `useSelector` and `useDispatch` from `react-redux`  
+- Hooks: `useEffect`, `useRef`  
+- Component-based structure  
 
-### **State Management**
-- **Redux Toolkit**
-  - `createSlice`, `configureStore`, actions & reducers  
+### **React Router**
+- `HashRouter`, `Route`, `Switch`, `Redirect`, `NavLink`  
 
-### **Styling**
-- **Styled Components**
-  - Theming (colors and breakpoints)
-  - Scoped component-level styling
+### **Redux Toolkit**
+- `createSlice` for task logic  
+- Async example task loading  
+- Selectors for task filtering and searching  
 
-### **JavaScript**
-- ES6+
-- Immutable state updates using Redux Toolkit (immer)
+### **Styled Components**
+- Global theme  
+- CSS-in-JS component styling  
+
+### **JavaScript (ES6+)**
+- Modern syntax  
+- Array operations, pure reducer logic (handled by Immer inside Redux Toolkit)
 
 ---
 
 ## Key Learning Points
 
-1. Managing state globally with Redux Toolkit  
-2. Organizing actions and reducers inside a slice  
-3. Using `useSelector` and `useDispatch` in components  
-4. Improving UX with `useRef` for input focusing  
-5. Structuring UI into reusable components  
-6. Styling with Styled Components
+1. Managing application-wide state using Redux Toolkit  
+2. Organizing reducers, actions, and selectors within a slice  
+3. Working with React Router and dynamic routes  
+4. Building reusable UI components  
+5. Styling using Styled Components and theming  
+6. Adding async flows with loading/error handling  
+7. Synchronizing Redux state with LocalStorage  
 
 ---
 
 ## Preview
 
-![gif - how to interact with the page](https://github.com/user-attachments/assets/c64e7ee4-8c91-459d-a8b0-206d8c9a7b5c)
+![gif - how to interact with the page](https://github.com/user-attachments/assets/01d64a94-46bc-4ab1-94c3-c863482886c2)
 
-![gif - responsiveness of the page](https://github.com/user-attachments/assets/6813d9cc-802f-4eb4-8892-855cf7048cf1)
+![gif - responsiveness of the page](https://github.com/user-attachments/assets/04290699-6fa1-4e7c-acd6-b4f7b2b7e0d2)
 
 ---
 
